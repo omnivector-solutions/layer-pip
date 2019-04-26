@@ -1,0 +1,7 @@
+includes:
+- layer:basic
+defines:
+  packages:
+    type: array
+    default: []
+    description: Additional pip packages to be installed

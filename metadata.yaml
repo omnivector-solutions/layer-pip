@@ -1,0 +1,13 @@
+name: pip
+series:
+- bionic
+- xenial
+summary: Pip layer for juju charms
+maintainer: tylerscheuble <tyler@scheuble.us>
+description: |
+  Convienience layer for installing python packages
+tags:
+- python
+- misc
+- omnivector
+subordinate: false
