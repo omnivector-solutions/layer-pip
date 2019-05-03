@@ -1,8 +1,7 @@
-# Pip layer
+# venv layer
 
-The pip layer for juju provides a convienient mechanism for
-higher-layered charms to install pip packages with layer
-options.
+The venv layer for juju provides a convienient mechanism for
+charms to install pip packages in a python3 venv.
 
 ## Usage
 
@@ -14,20 +13,18 @@ includes:
   - layer:basic
   - layer:pip
 options:
-  pip:
+  venv:
     packages:
       - left-pad
       - requirements-parser @ https://github.com/davidfischer/requirements-parser.git
+    env_dir: /usr/lib/myenv
 ```
 
 ## Flags
 
-The pip layer will attempt to parse the name of the requirement with 
-[requirements-parser](https://github.com/davidfischer/requirements-parser).
-
-After a package is installed, if the name of a requirement can be parsed, the flag `pip.installed.{requirement_name}` will be set. Otherwise a warning will be emitted.
-
-Once all packages are installed, the `pip.initialized` flag will be set.
+The `venv.active` flag is set once the virtual env is created, and
+the `venv.ready` flag is set once all packages listed in the options
+are installed.
 
 ## License
 

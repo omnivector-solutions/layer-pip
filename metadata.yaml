@@ -1,11 +1,11 @@
-name: pip
+name: venv
 series:
 - bionic
-- xenial
-summary: Pip layer for juju charms
+summary: venv layer for juju charms
 maintainer: tylerscheuble <tyler@scheuble.us>
 description: |
-  Convienience layer for installing python packages
+  Convienience layer for creating and installing
+  python packages to application venvs
 tags:
 - python
 - misc

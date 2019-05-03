@@ -1,7 +1,18 @@
 includes:
 - layer:basic
+options:
+  basic:
+    packages:
+    - python3-venv
 defines:
   packages:
     type: array
     default: []
-    description: Additional pip packages to be installed
+    description: Pip packages to be installed in env
+  env_dir:
+    description: |
+      Directory to store the virtual env.
+
+      Defaults to the charm directory.
+    type: string
+    default: ""
