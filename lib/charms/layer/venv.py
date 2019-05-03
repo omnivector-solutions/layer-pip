@@ -1,7 +1,7 @@
 from subprocess import check_call
 from pathlib import Path
 
-from charmhelpers.core.hookenv import log, charm_dir
+from charmhelpers.core.hookenv import log, application_name
 from charms.reactive import not_unless
 
 from charms.layer import options
@@ -9,12 +9,9 @@ from charms.layer import options
 
 _cfg = options.get('venv')
 
-
-if _cfg['env-dir']:
-    ENV_DIR = Path(_cfg['env-dir'])
-else:
-    ENV_DIR = Path(charm_dir()) / 'venv'
-
+ENV_NAME = _cfg['env_name'] if _cfg['env_name'] else application_name()
+log(f'ENV_NAME: {ENV_NAME}')
+ENV_DIR = Path('/opt/juju_venvs') / ENV_NAME
 ENV_BIN = ENV_DIR / 'bin'
 
 

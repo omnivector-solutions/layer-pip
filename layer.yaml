@@ -8,11 +8,11 @@ defines:
   packages:
     type: array
     default: []
-    description: Pip packages to be installed in env
-  env_dir:
+    description: Pip packages to be installed in the venv.
+  env_name:
     description: |
-      Directory to store the virtual env.
+      Name for the virtual env.
 
-      Defaults to the charm directory.
+      Defaults to the juju application name.
     type: string
     default: ""

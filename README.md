@@ -17,7 +17,7 @@ options:
     packages:
       - left-pad
       - requirements-parser @ https://github.com/davidfischer/requirements-parser.git
-    env_dir: /usr/lib/myenv
+    env_name: myenv
 ```
 
 ## Flags
