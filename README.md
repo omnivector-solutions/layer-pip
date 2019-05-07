@@ -11,7 +11,7 @@ at charm-build time in `layer.yaml`.
 ```yaml
 includes:
   - layer:basic
-  - layer:pip
+  - layer:venv
 options:
   venv:
     packages:
